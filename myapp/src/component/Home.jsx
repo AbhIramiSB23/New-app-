@@ -36,9 +36,9 @@ const Home = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>User Id</TableCell>
-            <TableCell align="right">Name</TableCell>
-            <TableCell align="right">Email</TableCell>
+            <TableCell>productName</TableCell>
+            <TableCell align="right">Category</TableCell>
+            <TableCell align="right">Price</TableCell>
             <TableCell align="right">Edit</TableCell>
             <TableCell align="right">Delete</TableCell>
     
@@ -47,14 +47,14 @@ const Home = () => {
         <TableBody>
           {users.map((row) => (
             <TableRow
-              key={row.userId}
+              key={row.productName}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.userId}
+                {row.productName}
               </TableCell>
-              <TableCell align="right">{row.userName}</TableCell>
-              <TableCell align="right">{row.email}</TableCell>
+              <TableCell align="right">{row.userCategory}</TableCell>
+              <TableCell align="right">{row.Price}</TableCell>
               
 
               <TableCell align="right"><Button variant="contained" onClick={()=>{
